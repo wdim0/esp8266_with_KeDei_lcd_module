@@ -17,9 +17,10 @@ TODO - video of working display with ESP8266
 Hack with 74HC4040 and without propagation delay compensation (max 13.3 MHz CLK)
 ![3.5" KeDei LCD module hacked - no propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_no_compensation.jpg)
 
-Hack with 74HC4040 and propagation delay compensation (max 20 MHz CLK)
+Hack with 74HC4040 and propagation delay compensation (max 20 MHz CLK).<br>
+Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_with_compensation.jpg)
-13.3 MHz CLK vs 20 MHz CLK comparison using WLCD demo:<br>
+<br>13.3 MHz CLK vs 20 MHz CLK comparison using WLCD demo:<br>
 1000 lines in 1833 ms vs 1595 ms => +15% faster<br>
 1000 images 50x50 in 3345 ms vs 2345 ms => +42% faster
 
@@ -35,7 +36,7 @@ Original 3.5" KeDei LCD module
 U1 removed (hot air soldering station is your friend), interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
 ![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
 
-Schema of the hack (not all parts of the display module are not drawn (power suppy, touch , ...). It's not important for the idea of the hack). Byt the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet).
+Schema of the hack (not all parts of the display module are not drawn (power suppy, touch, connectors, ...). It's not important for the idea of the hack). Byt the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet).
 ![Schema of the hack](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/schema.jpg)
 
 Timing is becomming important for 74HC... family when speed exceeds tenths of MHz ...<br>
