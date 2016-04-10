@@ -12,6 +12,8 @@ So basically, if you want to connect KeDei module to ESP8266, you have 3 options
 
 TODO - image of hacked module with high-speed 74VLS4040 module (just ordered 74VLS4040 ... pending) (max 40 MHz CLK I hope)
 
+TODO - video of working display with ESP8266
+
 Hack with 74HC4040 and without propagation delay compensation (max 13.3 MHz CLK)
 ![3.5" KeDei LCD module hacked - no propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_no_compensation.jpg)
 
@@ -33,10 +35,11 @@ Original 3.5" KeDei LCD module
 U1 removed (hot air soldering station is your friend), interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
 ![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
 
-Schema of the hack
+Schema of the hack (not all parts of the display module are not drawn (power suppy, touch , ...). It's not important for the idea of the hack). Byt the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet).
 ![Schema of the hack](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/schema.jpg)
 
-Timing is becomming important when speed exceeds tenths of MHz ...
+Timing is becomming important for 74HC... family when speed exceeds tenths of MHz ...<br>
+This is an explanation, why we need propagation delay compensation when we want to achieve higher speeds.
 ![Timig](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/timing.jpg)
 
 ## Thanks
