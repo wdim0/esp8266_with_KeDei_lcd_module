@@ -37,7 +37,7 @@ Original 3.5" KeDei LCD module
 U1 removed (hot air soldering station is your friend), interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
 ![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
 
-Schema of the hack (not all parts of the display module are drawn (power suppy, touch, connectors, ...). It's not important for the idea of the hack). Byt the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet).
+Schema of the hack (not all parts of the display module are drawn (power suppy, touch, connectors, ...). It's not important for the idea of the hack). By the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet).
 ![Schema of the hack](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/schema.jpg)
 
 Timing is becomming important for 74HC... family when speed exceeds tenths of MHz ...<br>
