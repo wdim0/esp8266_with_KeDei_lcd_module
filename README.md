@@ -21,7 +21,8 @@ Limitations:
 - The KeDei display should be v4.0 (see image in "The hack" section below) - with this version of the module I've done the hack and tested everything. Maybe also different versions will work (most probably they should work), but it's not guaranteed
 - In WLCD driver we're using "only" 65 k colors (R5G6B5) mode, because this gives us speed. A lot of it! Many things can be optimized then and we can use 32-bit copy instructions. Everything is nicely aligned when using R5G6B5 and ESP8266's HSPI
 
-TODO - image of final hack with serial production PCB with ESP-07 module connected to LCD module (SPI CLK is 40 MHz to LCD module).
+Serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
+TODO - image
 
 ##The hack
 
@@ -62,6 +63,9 @@ Use new CLK input, don't connect CLK to original connector.
 
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/NzYD4sONz2X/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz2X)
+
+Serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
+TODO - image
 
 ## Thanks
 
