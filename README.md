@@ -64,7 +64,7 @@ Use new CLK input, don't connect CLK to original connector.
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/NzYD4sONz2X/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz2X)
 
-Serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
+And this is the final product based on this hack - serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
 TODO - image
 
 ## Thanks
