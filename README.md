@@ -11,7 +11,7 @@ So basically, if you want to connect KeDei module to ESP8266, you have 3 options
 - hack the LCD module to get more standard LCD connection type (4-wire 8-bit data serial interface II) and use entire HSPI buffer. This gives us speed. If you're looking for suitable driver, you can use my WLCD driver for superfast drawing possibility (in ESP8266 terms). And that's what we're doing here ;)
 
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
-[![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/NzYD4sONz2X/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz2X)
+[![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/7dyVdiZUw1o/1.jpg)](http://www.youtube.com/watch?v=7dyVdiZUw1o)
 
 Third prototype hack with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
 Use new CLK input, don't connect CLK to original connector.
@@ -58,11 +58,11 @@ Third prototype hack with fast 74VHC4040 and propagation delay compensation => m
 Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with 74VHC4040 and propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_vhc_with_compensation.jpg)
 <br>20 MHz CLK vs 40 MHz CLK comparison using WLCD demo:<br>
-1000 lines in 1595 ms vs ?? ms => <b>+??% faster</b><br>
-1000 images 50x50 in 2345 ms vs ?? ms => <b>+??% faster</b>
+1000 lines in 1595 ms vs 1291 ms => <b>+19% faster</b><br>
+1000 images 50x50 in 2345 ms vs 1344 ms => <b>+74% faster</b>
 
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
-[![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/NzYD4sONz2X/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz2X)
+[![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/7dyVdiZUw1o/1.jpg)](http://www.youtube.com/watch?v=7dyVdiZUw1o)
 
 And this is the final product based on this hack - serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
 TODO - image
