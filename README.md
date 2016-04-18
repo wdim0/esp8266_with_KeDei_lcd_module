@@ -13,7 +13,7 @@ So basically, if you want to connect KeDei module to ESP8266, you have 3 options
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, CLK 20 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, CLK 20 MHz)](http://img.youtube.com/vi/NzYD4sONz20/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz20)
 
-TODO - image of hacked module with high-speed 74VLS4040 module (just ordered 74VLS4040 ... pending) (max 40 MHz CLK I hope)
+TODO - video and image of hacked module with high-speed 74VHC4040 module - WORKING! (CLK 40 MHz)
 
 Hack with 74HC4040 and without propagation delay compensation (max 13.3 MHz CLK)
 ![3.5" KeDei LCD module hacked - no propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_no_compensation.jpg)
