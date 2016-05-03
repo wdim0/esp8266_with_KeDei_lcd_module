@@ -56,7 +56,7 @@ Use new CLK input, don't connect CLK to original connector.
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74HC4040 - CLK 20 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74HC4040 - CLK 20 MHz)](http://img.youtube.com/vi/NzYD4sONz20/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz20)
 
-<b>Third prototype hack</a> with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
+<b>Third prototype hack</b> with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
 Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with 74VHC4040 and propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_vhc_with_compensation.jpg)
 <br>20 MHz CLK vs 40 MHz CLK comparison using WLCD demo:<br>
