@@ -13,7 +13,7 @@ So basically, if you want to connect KeDei module to ESP8266, you have 3 options
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/7dyVdiZUw1o/1.jpg)](http://www.youtube.com/watch?v=7dyVdiZUw1o)
 
-Third prototype hack with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
+<b>Third prototype hack</b> with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
 Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with 74VHC4040 and propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_vhc_with_compensation.jpg)
 
@@ -38,7 +38,7 @@ This is an explanation, why we need propagation delay compensation when we want 
 Original 3.5" KeDei LCD module
 ![Original 3.5" KeDei LCD module](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_original.jpg)
 
-U1 removed (hot air soldering station is your friend). If you want to copy my third prototype hack, interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
+U1 removed (hot air soldering station is your friend). If you want to copy my first/second/third prototype hack, interrupt PCB trace leading L_CS signal from U1 to U2 and U3's STCP input (interrupt between U1 and U2)
 ![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
 
 ## Previous versions / development of the hack
