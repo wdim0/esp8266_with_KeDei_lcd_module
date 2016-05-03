@@ -1,13 +1,13 @@
 # ESP8266 with 3.5" KeDei LCD module
 
-This repository describes an easy hack (depending on your DIY skills) of cheap KeDei LCD 3.5" module (320x480 pixels), originally sold as a display option for Raspberry Pi, to simulate more standard LCD connection (seen in LCD modules more often) using lines: /CS, D/C, SCLK, MOSI, (MISO), sometimes called as "4-wire 8-bit data serial interface II" or "4-line serial interface".<br>
-After the hack, the module can be used with my WLCD driver and ESP8266 for superfast drawing possibility (superfast in ESP8266 terms).
+This repository describes an idea of easy hack (depending on your DIY skills) of the cheap KeDei LCD 3.5" module (320x480 pixels), originally sold as a display option for Raspberry Pi, to simulate more standard LCD connection (seen in LCD modules more often) using lines: /CS, D/C, SCLK, MOSI, (MISO), sometimes called as "4-wire 8-bit data serial interface II" or "4-line serial interface".<br>
+After the hack, the module can be used with my WLCD driver and ESP8266 for superfast drawing possibility (superfast in ESP8266 terms) - see video with 40 MHz clock.
 
-Why? Because KeDei is cheap, nice, but it's not optimized for speed at all. At least for ESP8266 and it's HSPI interface and it's long transactions (max. 512 bits / 512 CLK long). Why they just didn't set the LCD controller into serial interface mode? Surely the Raspberry Pi could also manage that .. or not?
+Why? Because KeDei is cheap, nice, but it's not optimized for speed. At least for ESP8266 and it's HSPI interface and it's long transactions (max. 512 bits / 512 CLK long). The SW subroutines to manage shift register and pulse /CS adds unnecessary slowdown. Why they just didn't set the LCD controller into serial interface mode? (ILI9488's pins IM2:0) Surely the Raspberry Pi could also manage that .. or not?
 
 So basically, if you want to connect KeDei module to ESP8266, you have 3 options:
 - use SW bit-banging. Sooo sloooow, useless with 320x480 (153.6 k) pixels
-- use HSPI to perform some basic HW SPI transactions, but the transactions have to be short - number of transmitted bits must be exactly as KeDei internal shift register (3 x 74HC565 shift registers = 24 bits). Also not optimal for 320x480 pixels at all
+- use module as is and use HSPI to perform some basic HW SPI transactions, but the transactions have to be short - number of transmitted bits must be exactly as KeDei internal shift register (3 x 74HC565 shift registers = 24 bits). Also not optimal for 320x480 pixels at all
 - hack the LCD module to get more standard LCD connection type (4-wire 8-bit data serial interface II) and use entire HSPI buffer. This gives us speed. If you're looking for suitable driver, you can use my WLCD driver for superfast drawing possibility (in ESP8266 terms). And that's what we're doing here ;)
 
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br>
@@ -21,8 +21,10 @@ Limitations:
 - The KeDei display should be v4.0 (see image in "The hack" section below) - with this version of the module I've done the hack and tested everything. Maybe also different versions will work (most probably they should work), but it's not guaranteed
 - In WLCD driver we're using "only" 65 k colors (R5G6B5) mode, because this gives us speed. A lot of it! Many things can be optimized then and we can use 32-bit copy instructions. Everything is nicely aligned when using R5G6B5 and ESP8266's HSPI
 
-Serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module).<br>
-TODO - image
+And this could be done as a result. My ESP8266 powered 3.5" 480x320 WiFi LCD.<br>
+![ESP8266 powered 3.5" 480x320 WiFi LCD](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/ESP8266_with_KeDei_LCD_final.jpg)
+![ESP8266 powered 3.5" 480x320 WiFi LCD - the PCB](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/ESP8266_with_KeDei_LCD_final_PCB.jpg)
+Serial production PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module)
 
 ##The hack
 
