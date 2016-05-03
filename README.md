@@ -28,12 +28,6 @@ And this could be done as a result, based on this hack. My ESP8266 powered 3.5" 
 
 ##The hack
 
-Original 3.5" KeDei LCD module
-![Original 3.5" KeDei LCD module](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_original.jpg)
-
-U1 removed (hot air soldering station is your friend), interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
-![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
-
 Schema of the hack (not all parts of the display module are drawn (power suppy, touch, connectors, ...). It's not important for the idea of the hack). By the "propagation delay" I mean the delay between the input and output change. For 74HC4040's CP input and Q2 output, it's someting around 40 ns (according to datasheet). For 74VHC4040 it's someting around 10 ns (for VCC = 3.8V, measured).
 ![Schema of the hack](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/schema.jpg)
 
@@ -41,12 +35,18 @@ Timing is becomming important for 74HC... family when speed exceeds tenths of MH
 This is an explanation, why we need propagation delay compensation when we want to achieve higher speeds.
 ![Timig](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/timing.jpg)
 
+Original 3.5" KeDei LCD module
+![Original 3.5" KeDei LCD module](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_original.jpg)
+
+U1 removed (hot air soldering station is your friend). If you want to copy my third prototype hack, interrupt PCB trace leading signal L_CS to U2 and U3's STCP input
+![U1 removed, interrupt PCB trace](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_U1_removed_interrupt_PCB_trace.jpg)
+
 ## Previous versions / development of the hack
 
-First prototype hack with standard 74HC4040 (and no propagation delay compensation) => max 13.3 MHz CLK
+<b>First prototype hack</b> with standard 74HC4040 (and no propagation delay compensation) => max 13.3 MHz CLK
 ![3.5" KeDei LCD module hacked - no propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_no_compensation.jpg)
 
-Second prototype hack with standard 74HC4040 and propagation delay compensation => max 20 MHz CLK<br>
+<b>Second prototype hack</b> with standard 74HC4040 and propagation delay compensation => max 20 MHz CLK<br>
 Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_with_compensation.jpg)
 <br>13.3 MHz CLK vs 20 MHz CLK comparison using WLCD demo:<br>
@@ -56,7 +56,7 @@ Use new CLK input, don't connect CLK to original connector.
 <b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74HC4040 - CLK 20 MHz) - video</b><br>
 [![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74HC4040 - CLK 20 MHz)](http://img.youtube.com/vi/NzYD4sONz20/1.jpg)](http://www.youtube.com/watch?v=NzYD4sONz20)
 
-Third prototype hack with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
+<b>Third prototype hack</a> with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br>
 Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with 74VHC4040 and propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_vhc_with_compensation.jpg)
 <br>20 MHz CLK vs 40 MHz CLK comparison using WLCD demo:<br>
