@@ -24,7 +24,7 @@ Limitations:
 And this could be done as a result, based on this hack. My ESP8266 powered 3.5" 480x320 WiFi LCD (SPI CLK is 40 MHz to LCD module)<br>
 ![ESP8266 powered 3.5" 480x320 WiFi LCD](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/ESP8266_with_KeDei_LCD_final.jpg)
 ![ESP8266 powered 3.5" 480x320 WiFi LCD - the PCB](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/ESP8266_with_KeDei_LCD_final_PCB.jpg)
-"Serial production" PCB with ESP-07 module connected to hacked KeDei LCD module (SPI CLK is 40 MHz to LCD module)
+"Serial production" PCB with ESP-07 module connected to hacked KeDei LCD module
 
 ##The hack
 
