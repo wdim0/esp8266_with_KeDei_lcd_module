@@ -68,7 +68,7 @@ Use new CLK input, don't connect CLK to original connector.
 
 ## Thanks
 
-This hack would never be possible without the great starting point created by saper-2:<br>
+This hack would never be possible without great starting point created by saper-2:<br>
 https://github.com/saper-2/rpi-spi-lcd35-kedei<br>
 https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=124961
 
