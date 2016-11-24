@@ -20,7 +20,7 @@ Use new CLK input, don't connect CLK to original connector.
 ![3.5" KeDei LCD module hacked - with 74VHC4040 and propagation delay compensation](https://raw.githubusercontent.com/wdim0/esp8266_with_KeDei_lcd_module/master/module_hacked_vhc_with_compensation.jpg)
 
 Limitations:
-- The KeDei display must be v4.0 (see image in "The hack" section below) - with this version of the module I've done the hack and tested everything. I've tried the same thing unsuccessully with v6.0
+- The KeDei display must be v4.0 (see image in "The hack" section below) - with this version of the module I've done the hack and tested everything. I've tried the same thing with v6.0 - unsuccessfully. The wiring to shift register is different, LCD controller is different. If anyone knows the exact wiring of the control and data signals to shift register for v6.0, please tell me.
 - In WLCD driver we're using "only" 65 k colors (R5G6B5) mode, because this gives us speed. A lot of it! Many things can be optimized then and we can use 32-bit copy instructions. Everything is nicely aligned when using R5G6B5 and ESP8266's HSPI
 
 And this could be done as a result, based on this hack. My ESP8266 powered 3.5" 480x320 WiFi LCD (SPI CLK is 40 MHz to LCD module)<br>
