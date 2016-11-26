@@ -2,6 +2,11 @@
 
 ! update - Because KeDei doesn't keep the backward compatibility at all, every "version" of the display has a different LCD panel with different connection. This hack works only with display KeDei module v4.0.
 
+! update2 - There's better way than to hack the KeDei displays! There's a LCD module that directly exposes the ILI9488 with no unnecessary intermediate shift registers. This means that we can have the "4-wire 8-bit data serial interface" to ILI9488 without any hacking (we can access pins IM2:0 and set this mode directly). Also, the company that sells this LCD modules seems to take completely different approach - they publish as many info and documentation as possible (KeDei keep everything as secret - at least in English I was not able to google any documentation about their modules). So definitely better approach to business than KeDei! And the price is more or less similar.<br>
+You can find the displays here:<br>
+http://www.buydisplay.com/default/serial-spi-3-5-inch-tft-lcd-module-in-320x480-optl-touchscreen-ili9488
+<br>or on eBay, as always :)
+<br><br>----------<br><br>
 This repository describes an idea of easy hack (depending on your DIY skills) of the cheap KeDei LCD 3.5" module (320x480 pixels), originally sold as a display option for Raspberry Pi, to simulate more standard LCD connection (seen in LCD modules more often) using lines: /CS, D/C, SCLK, MOSI, (MISO), sometimes called as "4-wire 8-bit data serial interface II" or "4-line serial interface".<br>
 After the hack, the module can be used with my WLCD driver and ESP8266 for superfast drawing possibility (superfast in ESP8266 terms) - see video with 40 MHz clock.
 
