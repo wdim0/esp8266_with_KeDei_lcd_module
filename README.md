@@ -3,7 +3,7 @@
 <b>update</b> - Because KeDei doesn't keep the backward compatibility at all, every "version" of the display has a different LCD panel with different connection. This hack works only with display KeDei module v4.0.
 
 <b>update2</b> - There's better way than to hack the KeDei displays! There's a LCD module that directly exposes the ILI9488 with no unnecessary intermediate shift registers. This means that we can have the "4-wire 8-bit data serial interface" to ILI9488 without any hacking (we can access pins IM2:0 and set this mode directly). Also, the company that sells this LCD modules seems to take completely different approach - they publish as many info and documentation as possible (KeDei keep everything as secret - at least in English I was not able to google any documentation about their modules). So definitely better approach to business than KeDei. And the price is more or less similar. There's only one disadvantage for ILI9488 users. The ILI9488 by default doesn't support 16 bpp (65k colors) mode in "4-wire 8-bit data serial interface" (although it supports it in parallel modes, which are used in this KeDei LCD display module). So we need to use 18 bpp (262k colors) mode which is a bit slower (more pixel data have to be transferred). See my https://github.com/wdim0/esp8266_fast_lcd_driver_hspi repo.<br />
-If you're interrested in this way, here's the link:<br>
+If you're interrested in this way, here's the link to the LCD module ER-TFT035-6:<br>
 http://www.buydisplay.com/default/serial-spi-3-5-inch-tft-lcd-module-in-320x480-optl-touchscreen-ili9488
 <br />or you can find these displays on eBay, as always :)
 <br /><br />----------<br /><br />
