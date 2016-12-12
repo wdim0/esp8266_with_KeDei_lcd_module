@@ -17,8 +17,8 @@ So basically, if you want to connect KeDei module to ESP8266, you have 3 options
 - use module as is and use HSPI to perform some basic HW SPI transactions, but the transactions have to be short - number of transmitted bits must be exactly as KeDei internal shift register (3 x 74HC565 shift registers = 24 bits). Also not optimal for 320x480 pixels at all
 - hack the LCD module to get more standard LCD connection type (4-wire 8-bit data serial interface II) and use entire HSPI buffer. This gives us speed. If you're looking for suitable driver, you can use my WLCD driver for superfast drawing possibility (in ESP8266 terms). And that's what we're doing here ;)
 
-<b>ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz) - video</b><br />
-[![ESP8266 with hacked 3.5" KeDei LCD module (480x320, SPI, 74VHC4040 - CLK 40 MHz)](http://img.youtube.com/vi/7dyVdiZUw1o/1.jpg)](http://www.youtube.com/watch?v=7dyVdiZUw1o)
+<b>ESP8266 @ 80 MHz with hacked 3.5" KeDei LCD module v4.0 with 74VHC4040 (480x320, 16 bpp, HSPI CLK 40 MHz) - video</b><br />
+[![ESP8266 @ 80 MHz with hacked 3.5" KeDei LCD module v4.0 with 74VHC4040 (480x320, 16 bpp, HSPI CLK 40 MHz)](http://img.youtube.com/vi/7dyVdiZUw1o/1.jpg)](http://www.youtube.com/watch?v=7dyVdiZUw1o)
 
 <b>Third prototype hack</b> with fast 74VHC4040 and propagation delay compensation => max 40 MHz CLK!<br />
 Use new CLK input, don't connect CLK to original connector.
